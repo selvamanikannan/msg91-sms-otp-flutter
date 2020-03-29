@@ -1,14 +1,31 @@
-# msg91_sms_otp
+# sms91-sms-otp
+This a tiny library for sending sms and otp using [sms91](https://msg91.com/).
 
-simple flutter packgae
+# Basic usage
+You could simply send a message, OTP  and verify otp.
 
-## Getting Started
+~~~~{.python}
+from sms91.sendsms import SMSClient
+cli = SMSClient()
+#initializing app
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+# get this key from https://msg91.com
+key = "31*****************P1" 
+# sender can be of anything in the length of 6. in inbox it will be "AX-TESTIN".
+sender = "TESTIN" 
+# [optional] no.of char in otp. minimum 4 char  
+otp_size = 6
+cli.initialize(key,sender,otp_size)
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+#send sms
+#phno list should have 10 digit indian numbers.
+phno = ["98XXXXXXX0,'77XXXXXXXX5"]
+message = "hi! this is a test message"
+cli.sendMessgae(message,phno) 
+
+#send otp
+phno = ["98XXXXXXX0,'77XXXXXXXX5"]
+cli.sendOtp(phno) 
+~~~~
+Yes, it is as simple as this.
+

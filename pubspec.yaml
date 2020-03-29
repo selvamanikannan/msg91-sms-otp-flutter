@@ -1,8 +1,8 @@
 name: msg91_sms_otp
-description: simple flutter packgae
+description: This a tiny library for sending sms and otp using msg91
 version: 0.0.1
-author:
-homepage: ddfjb
+author: Selvamani Kannan <selvamanikannan55@gmail.com>
+homepage: https://github.com/selvamanikannan/msg91-sms-otp-flutter
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
-
-* TODO: Describe initial release.
+## [0.0.1] - 2020-04-29
+ 
+* Created Package, using this send otp and sms.
